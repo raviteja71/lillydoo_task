@@ -1,0 +1,12 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+Users:
+  path:     /users
+  defaults: { _controller: AppBundle:Users:list, _format: html }
+delete:
+  path:     /delete/{userId}
+  defaults: { _controller: AppBundle:Users:delete, _format: html }
+user_edit:
+  path:     /user/{id}/edit
+  defaults: { _controller: AppBundle:Users:edit, _format: html }

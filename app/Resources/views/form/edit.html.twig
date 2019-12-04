@@ -1,0 +1,31 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Address Book{% endblock %}
+
+{% block body %}
+	<div class="jumbotron">
+		<h1>Edit address book</h1> 
+	 </div>
+   <div class="ml-1 row"><div class="col-sm-1 bg-light"></div>
+   <div class="align-items-center col-sm-4">
+	  {% block form %}
+		{% form_theme form 'bootstrap_4_layout.html.twig' %}
+			{{ form_start(form) }}
+				{{ form_row(form.firstname) }}
+				{{ form_row(form.lastname) }}
+				{{ form_row(form.email) }}
+				{{ form_row(form.zip) }}
+				{{ form_row(form.street) }}
+				{{ form_row(form.streetnr) }}
+				{{ form_row(form.city) }}
+				{{ form_row(form.country) }}
+				{{ form_row(form.phonenumber) }}
+				{{ form_row(form.picture) }}
+				<img src="{{ asset('images/'~pic_url) }}" height= "250px" class="img-rounded"/><br/><br/>
+				{{ form_row(form.birthdate) }}
+			{{ form_end(form) }}
+		{% endblock %}
+	</div></div>
+{% endblock %}
+

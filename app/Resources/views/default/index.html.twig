@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div id="welcome">
+		<h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
+	</div>
+	<ul class="list-group" id="navigation">
+		{% for item in navigation %}
+			<liclass="list-group-item">{{ item.firstname }}</li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}

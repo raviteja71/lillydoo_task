@@ -1,0 +1,16 @@
+{# app/Resources/TwigBundle/views/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="jumbotron ml-1 row mr-1">
+		<div class="col-sm-4">
+		<img src="{{ asset('public/images/Oops-2501.jpg') }}" class="img-rounded"/></div>
+		<div class="col-sm-8">
+		<h1>Page not found</h1>
+
+		<p>
+			The requested page couldn't be located. Checkout for any URL
+			misspelling or <a href="{{ path('homepage') }}">return to the homepage</a>.
+		</p></div>
+    </div>
+{% endblock %}
